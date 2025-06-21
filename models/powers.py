@@ -12,7 +12,7 @@ class Power(db.Model, SerializerMixin):
     description = db.Column(db.String, nullable=False)
 
      # recursions
-    serialize_rules = ('-hero_powers.power')
+    serialize_rules = ('-hero_powers.power',)
 
      # proxies
     heroes = association_proxy('heroes_powers', 'hero',

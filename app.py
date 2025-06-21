@@ -49,7 +49,7 @@ def get_powers():
 
 
 # GET /powers/:id
-@app.route('/powers/<int:power_id>')
+@app.route('/power/<int:power_id>')
 def get_power(power_id):
     power = Power.query.filter_by(id=power_id).first()
     if power:
